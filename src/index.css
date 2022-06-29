@@ -19,3 +19,14 @@ code {
 .app {
   font-family: 'Montserrat', sans-serif;
 }
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: lime;
+}
