@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#header-bar {
+  background-color: #4f5d73;
+}
+
+.app {
+  font-family: 'Montserrat', sans-serif;
+}
