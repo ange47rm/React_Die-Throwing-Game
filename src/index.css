@@ -12,12 +12,12 @@ code {
     monospace;
 }
 
-#header-bar {
-  background-color: #4f5d73;
-}
-
 .app {
   font-family: 'Montserrat', sans-serif;
+}
+
+.shadow {
+  box-shadow: 7px 7px 7px black;
 }
 
 .centered {
@@ -27,6 +27,18 @@ code {
   align-items: center;
 }
 
-.submit-btn {
-  background-color: lime;
+.input-field {
+  width: 50%;
+}
+
+#submit-btn {
+  background-color: rgb(71, 240, 71);
+  border: 2px solid transparent !important;
+  padding: 1rem !important;
+  font-size: 1.5rem !important;
+  border-radius: 1rem !important;
+}
+
+#header-bar {
+  background-color: #4f5d73;
 }
