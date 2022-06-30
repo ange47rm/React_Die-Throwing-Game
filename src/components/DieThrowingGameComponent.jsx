@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Streak from '../models/Streak';
+import EndResultComponent from './EndResultComponent.jsx';
 
 
 export default function DieThrowingGameComponent() {
 
     const [noOfThrows, setNoOfThrows] = useState();
     const [winningStreak, setWinningStreak] = useState();
+    const [showEndResult, setShowEndResult] = useState(false);
+    const [noSixes, setNoSixes] = useState(false);
 
 
     const handleThrowDie = (event) => {
@@ -17,6 +20,9 @@ export default function DieThrowingGameComponent() {
     };
 
     const throwDie = (noOfThrows) => {
+        setShowEndResult(false);
+        setNoSixes(false);
+
         let results = [];
         const diePossibleValues = ['1', '2', '3', '4', '5', '6'];
 
@@ -35,11 +41,12 @@ export default function DieThrowingGameComponent() {
         let noOfConsecutiveSixes = 0;
         let winningStreak = 0;
 
-        if (results.includes('6')) {
+        if (results && results.includes('6')) {
             noOfConsecutiveSixes = 1;
         } else {
-            console.error('No 6 in the results array');
-            return null;
+            console.error('No 6 in the results array!');
+            setNoSixes(true);
+            setShowEndResult(true);
         }
 
         for (let i = 0; i < results.length; i++) {
@@ -62,19 +69,14 @@ export default function DieThrowingGameComponent() {
         }
         console.log(winningStreak);
         setWinningStreak(winningStreak);
-    }
-
-    const endResult = () => {
-        // if 0 streak - display message "no streak"
-        // if throwsNo is over 1000000, error message!
-        // otherwise show normal message
+        setShowEndResult(true);
     }
 
     return (
         <div>
             <Form onSubmit={handleThrowDie}>
                 <Form.Group className="mb-3 centered">
-                    <h2>Number of times to throw the die</h2>
+                    <h2>- Number of times to throw the die -</h2>
                     <Form.Control type="number" max="1000000" placeholder="(Example: 24)" onChange={event => setNoOfThrows(event.target.value)} className="input-field m-5" required />
                 </Form.Group>
                 <div className='centered'>
@@ -82,9 +84,7 @@ export default function DieThrowingGameComponent() {
                 </div>
             </Form>
 
-            {winningStreak &&
-                <h4 className='centered m-5'>The largest winning streak (6's in a row) was: {winningStreak}</h4>
-            }
+            <EndResultComponent winningStreak={winningStreak} noSixes={noSixes} showEndResult={showEndResult} />
         </div>
     );
 }
