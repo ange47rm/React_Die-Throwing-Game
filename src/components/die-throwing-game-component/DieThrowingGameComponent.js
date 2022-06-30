@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Streak from '../models/Streak';
-import EndResultComponent from './EndResultComponent.jsx';
+import Streak from '../../models/Streak';
+import EndResultComponent from '../end-result-component/EndResultComponent';
 
 
 export default function DieThrowingGameComponent() {

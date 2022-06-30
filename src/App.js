@@ -1,6 +1,6 @@
 import React from 'react';
-import DieThrowingGameContainer from './containers/DieThrowingGameContainer';
 import './App.css';
+import DieThrowingGameContainer from './containers/die-throwing-game-container/DieThrowingGameContainer';
 
 function App() {
   return (
