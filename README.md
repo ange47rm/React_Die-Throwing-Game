@@ -1,3 +1,10 @@
+### RUNNING INSTRUCTIONS
+
+1. Download and install Node.JS and NPM (https://nodejs.org/en/download/) - Node v18.4.0 and NPM v8.12.1 were used for this project.
+2. Access the root folder of the project ("die-throwing-game"), where the package.json file is located, and run `npm i` to install project dependencies. This might take a few minutes. 
+3. Run the command `npm start` to start the development server/project. The application will be hosted locaally on http://localhost:3000/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
