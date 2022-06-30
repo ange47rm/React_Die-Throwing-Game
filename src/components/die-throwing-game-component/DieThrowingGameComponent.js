@@ -77,10 +77,10 @@ export default function DieThrowingGameComponent() {
             <Form onSubmit={handleThrowDie}>
                 <Form.Group className="mb-3 centered">
                     <h2>- Number of times to throw the die -</h2>
-                    <Form.Control type="number" max="1000000" placeholder="(Example: 24)" onChange={event => setNoOfThrows(event.target.value)} className="input-field m-5" required />
+                    <Form.Control type="number" max="1000000" placeholder="(Example: 24)" id='user-input' onChange={event => setNoOfThrows(event.target.value)} className="input-field m-5" required />
                 </Form.Group>
                 <div className='centered'>
-                    <Button variant="warning" className='button shadow' id='submit-btn' type="submit">Throw Die!<img src="../../dices.png" alt="die-icon" height="80" /></Button>
+                    <Button className='button shadow' id='submit-btn' type="submit">Throw!<img src="../../dices.png" alt="die-icon" height="80" /></Button>
                 </div>
             </Form>
 

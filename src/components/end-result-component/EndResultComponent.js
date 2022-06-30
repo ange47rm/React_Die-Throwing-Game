@@ -5,7 +5,7 @@ export default function EndResultComponent({ winningStreak, noSixes, showEndResu
     const endResult = () => {
         if (winningStreak > 0) {
             return (
-                <h4 className='centered m-5'>The largest winning streak (6's in a row) was: {winningStreak}</h4>
+                <h4 className='centered m-5'>The largest winning streak (6's in a row) was: <b>{winningStreak}</b></h4>
             )
         } else if (noSixes === true) {
             return (
