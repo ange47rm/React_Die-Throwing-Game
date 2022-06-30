@@ -1,9 +1,18 @@
-### RUNNING INSTRUCTIONS
+### GITHUB REPOSITORY
+The project can be found in my Github profile (https://github.com/ange47rm/React_Die-Throwing-Game).
 
+### PREREQUISITES
 1. Download and install Node.JS and NPM (https://nodejs.org/en/download/) - Node v18.4.0 and NPM v8.12.1 were used for this project.
-2. Access the root folder of the project ("die-throwing-game"), where the package.json file is located, and run `npm i` to install project dependencies. This might take a few minutes. 
-3. Run the command `npm start` to start the development server/project. The application will be hosted locaally on http://localhost:3000/
+2. You may require Git to be installed locally to clone from the repository (`git clone https://github.com/ange47rm/React_Die-Throwing-Game.git`), alternatively you should be able to download the .zip file from the repository link.
 
+### RUNNING INSTRUCTIONS
+1. Access the root folder of the project ("die-throwing-game"), where the package.json file is located, and run `npm i` to install project dependencies. This might take a few minutes. 
+2. Run the command `npm start` to start the development server/project. The application will be hosted locaally on http://localhost:3000/
+
+### POTENTIAL WARNING - Warning (6:29521) autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated.
+If you get the above warning while running the application, access the file "bootstrap.min.css" (should be located at "node_modules/bootstrap/dist/css/bootstrap.min.css"), press ALT + SHIFT + F to format the css file correctly and find the ".form-check-input" CSS selector. This will contain a "color-adjust" option. Replace `color-adjust` with `print-color-adjust` and save the file.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Getting Started with Create React App
 

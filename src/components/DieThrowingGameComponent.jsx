@@ -67,7 +67,7 @@ export default function DieThrowingGameComponent() {
                 winningStreak = streak.noOfConsecutiveSixes
             }
         }
-        console.log(winningStreak);
+        console.log("Winning Streak:", winningStreak);
         setWinningStreak(winningStreak);
         setShowEndResult(true);
     }
