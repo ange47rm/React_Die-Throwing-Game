@@ -8,7 +8,7 @@ The project can be found in my Github profile (https://github.com/ange47rm/React
 ### RUNNING INSTRUCTIONS
 1. Access the root folder of the project ("die-throwing-game"), where the package.json file is located, and run `npm i` to install project dependencies. This might take a few minutes. 
 2. Run the command `npm start` to start the development server/project. The application will be hosted by default on http://localhost:3000/ .
-3 A few basic tests have been added, you can run those by using the command `npm test`.
+3 A few basic tests have been added, you can run those by using the command `npm test a`.
 
 ### POTENTIAL WARNING - Warning (6:29521) autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated.
 If you get the above warning while running the application, access the file "bootstrap.min.css" (should be located at "node_modules/bootstrap/dist/css/bootstrap.min.css"), press ALT + SHIFT + F to format the css file correctly and find the ".form-check-input" CSS selector. This will contain a "color-adjust" option. Replace `color-adjust` with `print-color-adjust` and save the file.
